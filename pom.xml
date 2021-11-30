@@ -109,7 +109,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.opticortes.api.OptiCutServicesAPI</mainClass>
+                            <mainClass>com.opticortes.api.OptiCutPedidosAPI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -121,7 +121,7 @@
                 <version>3.0.4</version>
                 <configuration>
                     <jdkVersion>16</jdkVersion>
-                    <appName>opticut-pedidos-api</appName>
+                    <appName>opticut-orders-api</appName>
                     <processTypes>
                         <web>java -jar ./target/Pedidos-API-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
