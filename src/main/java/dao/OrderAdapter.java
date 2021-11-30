@@ -36,7 +36,6 @@ public class OrderAdapter implements JsonSerializer<Order>, JsonDeserializer<Ord
     public Order deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         JsonObject jsonObject = jsonElement.getAsJsonObject();
 
-//        String id = jsonObject.get(ID).getAsString();
         String client = jsonObject.get(CLIENT).getAsString();
         String plank = jsonObject.get(PLANK).getAsString();
 
