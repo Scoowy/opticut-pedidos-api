@@ -1,6 +1,6 @@
-package api;
+package com.opticortes.api;
 
-import controllers.OrdersController;
+import com.opticortes.controllers.OrdersController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Spark;
@@ -16,7 +16,7 @@ public class OptiCutPedidosAPI {
 
         Spark.get("/", (request, response) -> "Todo bien!");
 
-        Spark.path("/api", () -> {
+        Spark.path("/com/opticortes/api", () -> {
             Spark.path("/orders", () -> {
                 Spark.get("", ordersCtrl::getAll);
                 Spark.post("", ordersCtrl::addNew);

@@ -1,9 +1,9 @@
-package dao;
+package com.opticortes.dao;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import entities.Order;
-import entities.Piece;
+import com.opticortes.entities.Order;
+import com.opticortes.entities.Piece;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

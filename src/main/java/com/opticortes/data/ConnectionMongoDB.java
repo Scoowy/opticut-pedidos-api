@@ -1,4 +1,4 @@
-package data;
+package com.opticortes.data;
 
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
@@ -8,7 +8,7 @@ import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistries;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
-import utils.DbConfig;
+import com.opticortes.utils.DbConfig;
 
 public class ConnectionMongoDB {
     private static MongoClient mongoClient;

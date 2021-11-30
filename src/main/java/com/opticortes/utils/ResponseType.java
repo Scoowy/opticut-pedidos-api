@@ -1,4 +1,4 @@
-package utils;
+package com.opticortes.utils;
 
 
 public enum ResponseType {

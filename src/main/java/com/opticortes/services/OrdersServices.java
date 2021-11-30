@@ -1,8 +1,8 @@
-package services;
+package com.opticortes.services;
 
 import com.mongodb.client.MongoDatabase;
-import dao.OrderDAO;
-import entities.Order;
+import com.opticortes.dao.OrderDAO;
+import com.opticortes.entities.Order;
 
 import java.util.List;
 

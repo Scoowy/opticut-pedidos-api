@@ -1,4 +1,4 @@
-package utils;
+package com.opticortes.utils;
 
 import java.util.StringJoiner;
 

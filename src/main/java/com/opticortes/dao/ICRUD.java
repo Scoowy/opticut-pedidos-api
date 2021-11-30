@@ -1,4 +1,4 @@
-package dao;
+package com.opticortes.dao;
 
 import java.util.List;
 

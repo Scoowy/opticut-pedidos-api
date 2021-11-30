@@ -1,4 +1,4 @@
-package dao;
+package com.opticortes.dao;
 
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -9,8 +9,8 @@ import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.InsertOneResult;
 import com.mongodb.client.result.UpdateResult;
-import data.ConnectionMongoDB;
-import entities.Order;
+import com.opticortes.data.ConnectionMongoDB;
+import com.opticortes.entities.Order;
 import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
