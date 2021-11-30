@@ -16,7 +16,7 @@ public class OptiCutPedidosAPI {
 
         Spark.get("/", (request, response) -> "Todo bien!");
 
-        Spark.path("/com/opticortes/api", () -> {
+        Spark.path("/api", () -> {
             Spark.path("/orders", () -> {
                 Spark.get("", ordersCtrl::getAll);
                 Spark.post("", ordersCtrl::addNew);
