@@ -1,15 +1,10 @@
-package api;
+package com.opticortes.api;
 
+import com.opticortes.controllers.OrdersController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Spark;
 
-/**
- * Class
- *
- * @author Scoowy
- * @version 2021.11.26.1209
- */
 public class OptiCutPedidosAPI {
 
     public final static Logger logger = LoggerFactory.getLogger(OptiCutPedidosAPI.class);
@@ -17,18 +12,21 @@ public class OptiCutPedidosAPI {
     public static void main(String[] args) {
         Spark.port(getPort());
 
+        OrdersController ordersCtrl = new OrdersController();
+
         Spark.get("/", (request, response) -> "Todo bien!");
 
         Spark.path("/api", () -> {
-            Spark.path("/pedidos", () -> {
-                Spark.get("", (req, res) -> "Get Planks");
-                Spark.post("", (req, res) -> "Get Planks");
-                Spark.delete("", (req, res) -> "Get Planks");
+            Spark.path("/orders", () -> {
+                Spark.get("", ordersCtrl::getAll);
+                Spark.post("", ordersCtrl::addNew);
+                Spark.delete("", ordersCtrl::deleteAll);
 
-                Spark.path("/:pedidosId", () -> {
-                    Spark.get("", (req, res) -> "Get Planks");
-                    Spark.put("", (req, res) -> "Get Planks");
-                    Spark.delete("", (req, res) -> "Get Planks");
+                Spark.path("/:orderId", () -> {
+                    Spark.get("", ordersCtrl::getOne);
+                    Spark.put("", ordersCtrl::updateOne);
+                    Spark.delete("", ordersCtrl::deleteOne);
+                    Spark.get("/:newStatus", ordersCtrl::changeStatus);
                 });
             });
         });
