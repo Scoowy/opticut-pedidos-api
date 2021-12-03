@@ -17,7 +17,7 @@ public class ConnectionMongoDB {
     public static MongoClient getMongoClient() {
         final String URL_CONN = String.format(DbConfig.DB_URL, DbConfig.DB_USER, DbConfig.DB_PASSWORD);
         if (mongoClient == null) {
-            mongoClient = MongoClients.create("mongodb+srv://admin:admin1234@cluster0.ysgkt.mongodb.net/opticut-orders-api?retryWrites=true&w=majority");
+            mongoClient = MongoClients.create(URL_CONN);
         }
 
         return mongoClient;
